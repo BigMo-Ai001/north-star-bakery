@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about North Star Bakery, our passion for baking, and our commitment to delicious treats.">
+    <title>About Us | North Star Bakery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">North Star <span>Bakery</span></a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="products.html">Our Products</a>
+            <a class="active" href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <p class="eyebrow">OUR STORY</p>
+            <h1>More Than Just a Bakery</h1>
+            <p>
+                At North Star Bakery, we believe that freshly baked treats
+                can turn ordinary moments into wonderful memories.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">WHO WE ARE</p>
+                    <h2>Made with Care, Shared with Love</h2>
+                </div>
+            </div>
+
+            <p>
+                North Star Bakery is built around a simple idea: good baking
+                brings people together. Whether it is a loaf of bread for
+                the family table, a pastry with your morning coffee, or a
+                cake for a special celebration, we want every bakery visit
+                to feel warm and welcoming.
+            </p>
+
+            <p>
+                We celebrate the comfort of classic bakery favourites and
+                the joy of discovering something sweet. Our goal is to make
+                choosing a treat easy, enjoyable and memorable for everyone
+                who visits us.
+            </p>
+        </section>
+
+        <section class="featured section-padding">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">WHAT MATTERS TO US</p>
+                    <h2>Our Values</h2>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-art bread-art" aria-hidden="true">🌾</div>
+                    <div class="product-info">
+                        <h3>Quality</h3>
+                        <p>
+                            We aim to offer enjoyable bakery products with
+                            care and attention to every detail.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-art cake-art" aria-hidden="true">❤️</div>
+                    <div class="product-info">
+                        <h3>Care</h3>
+                        <p>
+                            We want every customer to feel welcome, valued
+                            and appreciated.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-art pastry-art" aria-hidden="true">✨</div>
+                    <div class="product-info">
+                        <h3>Joy</h3>
+                        <p>
+                            We believe a delicious treat can make an ordinary
+                            day feel a little more special.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="visit-banner">
+            <p class="eyebrow">COME AND SAY HELLO</p>
+            <h2>Let's Make Life a Little Sweeter</h2>
+            <p>Explore our bakery favourites or get in touch with our team.</p>
+            <a class="button button-light" href="contact.html">Contact Us</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo footer-logo" href="index.html">North Star <span>Bakery</span></a>
+        <p>Freshly baked with love, every day.</p>
+        <p class="copyright">&copy; 2026 North Star Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
