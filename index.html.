@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover freshly baked breads, cakes, pastries and treats at North Star Bakery.">
+    <title>North Star Bakery | Freshly Baked with Love</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">North Star <span>Bakery</span></a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="products.html">Our Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">FRESH FROM OUR OVEN</p>
+                <h1>A Little Sweetness Makes Every Day Better.</h1>
+                <p class="hero-description">
+                    From golden, freshly baked bread to delicious cakes and
+                    pastries, we make every bite feel special.
+                </p>
+                <a class="button" href="products.html">Explore Our Treats</a>
+            </div>
+
+            <div class="hero-art" role="img" aria-label="Illustration of freshly baked bread and pastries">
+                <span class="bread-emoji" aria-hidden="true">🥐</span>
+                <span class="cake-emoji" aria-hidden="true">🎂</span>
+                <p>Baked fresh. Shared with love.</p>
+            </div>
+        </section>
+
+        <section class="welcome section-padding">
+            <p class="eyebrow">WELCOME TO NORTH STAR</p>
+            <h2>Your Neighbourhood Bakery</h2>
+            <p>
+                We believe the best moments are made sweeter with good food.
+                That's why we bring together comforting classics, delightful
+                flavours and a passion for freshly baked goodness.
+            </p>
+        </section>
+
+        <section class="featured section-padding">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">MADE FRESH FOR YOU</p>
+                    <h2>Bakery Favourites</h2>
+                </div>
+                <a class="text-link" href="products.html">View all products →</a>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-art bread-art" aria-hidden="true">🍞</div>
+                    <div class="product-info">
+                        <h3>Freshly Baked Bread</h3>
+                        <p>Warm, soft and perfect for any time of day.</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-art cake-art" aria-hidden="true">🧁</div>
+                    <div class="product-info">
+                        <h3>Cakes & Cupcakes</h3>
+                        <p>Sweet treats for celebrations big and small.</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-art pastry-art" aria-hidden="true">🥐</div>
+                    <div class="product-info">
+                        <h3>Pastries & Delights</h3>
+                        <p>Flaky, golden bites to brighten your day.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="visit-banner">
+            <p class="eyebrow">SOMETHING DELICIOUS IS WAITING</p>
+            <h2>Make Today a Little Sweeter</h2>
+            <p>Find your next bakery favourite or get in touch with us.</p>
+            <a class="button button-light" href="contact.html">Contact Our Bakery</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo footer-logo" href="index.html">North Star <span>Bakery</span></a>
+        <p>Freshly baked with love, every day.</p>
+        <p class="copyright">&copy; 2026 North Star Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
