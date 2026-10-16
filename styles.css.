@@ -1,0 +1,508 @@
+
+/* =========================================
+   NORTH STAR BAKERY
+   Responsive Website Stylesheet
+   ========================================= */
+
+/* 1. Design system and global styles */
+
+:root {
+    --cream: #FFF8F0;
+    --brown: #6B3E26;
+    --peach: #D88C5A;
+    --charcoal: #2F2A26;
+    --white: #FFFFFF;
+    --light-peach: #F7E5D8;
+    --muted-text: #71665E;
+
+    --heading-font: "Playfair Display", Georgia, serif;
+    --body-font: "Inter", Arial, sans-serif;
+
+    --content-width: 1160px;
+    --section-space: 64px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible,
+.button:focus-visible {
+    outline: 3px solid var(--peach);
+    outline-offset: 4px;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: var(--brown);
+    font-family: var(--heading-font);
+    line-height: 1.2;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.4rem, 9vw, 4rem);
+}
+
+h2 {
+    margin-bottom: 18px;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.35rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+/* 2. Header and navigation */
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 5%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--light-peach);
+}
+
+.logo {
+    color: var(--brown);
+    font-family: var(--heading-font);
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo span {
+    color: var(--peach);
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+}
+
+.main-nav a {
+    padding: 5px 0;
+    color: var(--charcoal);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--peach);
+}
+
+/* 3. Reusable buttons and text */
+
+.button {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 2px solid var(--brown);
+    border-radius: 6px;
+    background-color: var(--brown);
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background-color: var(--peach);
+    border-color: var(--peach);
+}
+
+.button-light {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--brown);
+}
+
+.button-light:hover {
+    background-color: var(--light-peach);
+    border-color: var(--light-peach);
+    color: var(--brown);
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: var(--peach);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.text-link {
+    color: var(--brown);
+    font-weight: 700;
+}
+
+.text-link:hover {
+    color: var(--peach);
+}
+
+/* 4. Homepage hero section */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding: 56px 6%;
+    background: linear-gradient(
+        135deg,
+        var(--cream) 0%,
+        var(--light-peach) 100%
+    );
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin-bottom: 28px;
+    color: var(--muted-text);
+    font-size: 1.05rem;
+}
+
+.hero-art {
+    display: flex;
+    min-height: 240px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px;
+    border: 1px solid rgba(107, 62, 38, 0.1);
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.bread-emoji {
+    font-size: 6rem;
+}
+
+.cake-emoji {
+    font-size: 2.6rem;
+}
+
+.hero-art p {
+    margin: 0;
+    color: var(--brown);
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+}
+
+/* 5. Welcome section */
+
+.section-padding {
+    padding: var(--section-space) 6%;
+}
+
+.welcome {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted-text);
+}
+
+/* 6. Featured products */
+
+.featured {
+    background-color: var(--white);
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: var(--content-width);
+    margin: 0 auto;
+}
+
+.product-card {
+    overflow: hidden;
+    border: 1px solid var(--light-peach);
+    border-radius: 12px;
+    background-color: var(--cream);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(47, 42, 38, 0.08);
+}
+
+.product-art {
+    display: flex;
+    min-height: 180px;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.bread-art {
+    background-color: #F4E4C9;
+}
+
+.cake-art {
+    background-color: #F8E0DE;
+}
+
+.pastry-art {
+    background-color: #F8E9D9;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info p {
+    margin-bottom: 0;
+    color: var(--muted-text);
+    font-size: 0.95rem;
+}
+
+/* 7. Call-to-action banner */
+
+.visit-banner {
+    padding: 58px 6%;
+    background-color: var(--brown);
+    color: var(--white);
+    text-align: center;
+}
+
+.visit-banner h2 {
+    color: var(--white);
+}
+
+.visit-banner .eyebrow {
+    color: #F2C19F;
+}
+
+.visit-banner > p:not(.eyebrow) {
+    margin-bottom: 26px;
+}
+
+/* 8. Footer */
+
+.site-footer {
+    padding: 36px 6%;
+    background-color: var(--charcoal);
+    color: var(--white);
+    text-align: center;
+}
+
+.footer-logo {
+    color: var(--white);
+}
+
+.site-footer p {
+    margin: 12px 0;
+}
+
+.copyright {
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #D9CFC8;
+    font-size: 0.82rem;
+}
+
+/* 9. Supporting pages */
+
+.page-hero {
+    padding: 48px 6%;
+    background-color: var(--light-peach);
+    text-align: center;
+}
+
+.page-hero p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--muted-text);
+}
+
+.content-section {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--section-space) 6%;
+}
+
+.content-section p {
+    color: var(--muted-text);
+}
+
+.product-price {
+    color: var(--brown);
+    font-weight: 700;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.contact-card {
+    padding: 24px;
+    border: 1px solid var(--light-peach);
+    border-radius: 12px;
+    background-color: var(--white);
+}
+
+.contact-card h3 {
+    margin-bottom: 12px;
+}
+
+.contact-card a {
+    color: var(--brown);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* 10. Responsive tablet and desktop layouts */
+
+@media (min-width: 768px) {
+    :root {
+        --section-space: 84px;
+    }
+
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 22px 6%;
+    }
+
+    .main-nav {
+        gap: 24px;
+    }
+
+    .hero {
+        min-height: 520px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 48px;
+        padding: 76px 8%;
+    }
+
+    .hero-content {
+        flex: 1;
+    }
+
+    .hero-art {
+        flex: 0.8;
+        min-height: 350px;
+    }
+
+    .section-heading {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .contact-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 11. Smaller mobile screens */
+
+@media (max-width: 380px) {
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .main-nav {
+        gap: 6px 12px;
+    }
+
+    .main-nav a {
+        font-size: 0.82rem;
+    }
+
+    .hero {
+        padding: 42px 5%;
+    }
+
+    .section-padding {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+/* 12. Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
