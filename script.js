@@ -155,7 +155,7 @@ function initialiseContactForm() {
       return;
     }
 
-    status.textContent = "Thank you, " + form.elements.name.value.trim() +
+    status.textContent = "Thank you, " + form.elements.namedItem("name").value.trim() +
       ". Your message passed validation. This learning project stores the draft in your browser; it does not send email.";
   });
 }
