@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +6,13 @@
   <meta name="description" content="Discover freshly baked bread, cakes and pastries at North Star Bakery.">
   <title>North Star Bakery | Freshly Baked Happiness</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a class="logo" href="index.html">North Star Bakery</a>
     <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="#products">Our Bakery</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -45,24 +45,33 @@
     <section class="products" id="products">
       <p class="eyebrow">MADE FRESH WITH LOVE</p>
       <h2>Our Bakery Favourites</h2>
+      <p class="feature-intro">Save treats you would love to try. Your favourites are remembered on this device.</p>
+
+      <div class="favourite-status" aria-live="polite">
+        <strong>Saved favourites: <span id="favourite-count">0</span></strong>
+        <p id="favourite-summary">Your favourites will appear here when you save a bakery treat.</p>
+      </div>
 
       <div class="product-grid">
         <article class="product-card">
           <div class="product-emoji" aria-hidden="true">🥐</div>
           <h3>Golden Pastries</h3>
           <p>Flaky, buttery and baked to golden perfection.</p>
+          <button class="favourite-button" type="button" data-favourite-id="pastries" aria-pressed="false">♡ Add to favourites</button>
         </article>
 
         <article class="product-card">
           <div class="product-emoji" aria-hidden="true">🍞</div>
           <h3>Freshly Baked Bread</h3>
           <p>Soft, comforting bread for every occasion.</p>
+          <button class="favourite-button" type="button" data-favourite-id="bread" aria-pressed="false">♡ Add to favourites</button>
         </article>
 
         <article class="product-card">
           <div class="product-emoji" aria-hidden="true">🎂</div>
           <h3>Celebration Cakes</h3>
           <p>Sweet creations for your unforgettable moments.</p>
+          <button class="favourite-button" type="button" data-favourite-id="cakes" aria-pressed="false">♡ Add to favourites</button>
         </article>
       </div>
     </section>
