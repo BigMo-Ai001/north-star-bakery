@@ -1,101 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact North Star Bakery with questions about our bakery products and offerings.">
-    <title>Contact Us | North Star Bakery</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact North Star Bakery with questions about our bakery products and offerings.">
+  <title>Contact Us | North Star Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="site-header">
-        <a class="logo" href="index.html">North Star <span>Bakery</span></a>
+  <header class="site-header">
+    <a class="logo" href="index.html">North Star Bakery</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Our Bakery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
 
-        <nav class="main-nav" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="products.html">Our Products</a>
-            <a href="about.html">About Us</a>
-            <a class="active" href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+      <h1>Get in Touch</h1>
+      <p>Have a question about our bakery products or want to learn more about North Star Bakery? Send us a message using the form below.</p>
+    </section>
 
-    <main>
-        <section class="page-hero">
-            <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
-            <h1>Get in Touch</h1>
-            <p>
-                Have a question about our bakery products or want to learn
-                more about North Star Bakery? We'd be happy to hear from you.
-            </p>
-        </section>
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Contact Our Bakery</h2>
+      </div>
 
-        <section class="content-section">
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">LET'S CONNECT</p>
-                    <h2>Contact Our Bakery</h2>
-                </div>
+      <div class="contact-layout">
+        <article class="contact-card">
+          <h3>Our Products</h3>
+          <p>Discover breads, cakes, pastries and other bakery favourites.</p>
+          <a href="index.html#products">Explore Our Bakery →</a>
+        </article>
+
+        <article class="contact-card">
+          <h3>Our Story</h3>
+          <p>Learn about the values and passion behind North Star Bakery.</p>
+          <a href="about.html">About North Star Bakery →</a>
+        </article>
+
+        <article class="contact-card contact-form-card">
+          <h3>Send Us a Message</h3>
+          <p>Complete the fields below. Your draft is saved in this browser so you can return to it later.</p>
+          <p class="form-notice" id="draft-notice" aria-live="polite">Your message is kept in this browser for this learning project.</p>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required minlength="2" aria-describedby="name-error">
+              <span class="field-error" id="name-error" aria-live="polite"></span>
             </div>
 
-            <div class="contact-layout">
-                <article class="contact-card">
-                    <h3>Send Us an Email</h3>
-                    <p>
-                        For enquiries about our products and offerings,
-                        send us a message by email.
-                    </p>
-                    <!-- Replace the example email address with the bakery's real email. -->
-                    <a href="mailto:hello@example.com">hello@example.com</a>
-                </article>
-
-                <article class="contact-card">
-                    <h3>Visit Us</h3>
-                    <p>
-                        We'd love to welcome you. Add the bakery's confirmed
-                        street address and opening hours here when available.
-                    </p>
-                    <p><strong>Address:</strong> Add bakery address</p>
-                    <p><strong>Opening hours:</strong> Add confirmed opening hours</p>
-                </article>
-
-                <article class="contact-card">
-                    <h3>Our Products</h3>
-                    <p>
-                        Discover breads, cakes, pastries and other bakery
-                        favourites on our products page.
-                    </p>
-                    <a href="products.html">Explore Our Products →</a>
-                </article>
-
-                <article class="contact-card">
-                    <h3>Our Story</h3>
-                    <p>
-                        Learn about the values and passion behind
-                        North Star Bakery.
-                    </p>
-                    <a href="about.html">About North Star Bakery →</a>
-                </article>
+            <div class="form-field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+              <span class="field-error" id="email-error" aria-live="polite"></span>
             </div>
-        </section>
 
-        <section class="visit-banner">
-            <p class="eyebrow">THANK YOU FOR VISITING</p>
-            <h2>Every Day Deserves Something Delicious</h2>
-            <p>We look forward to connecting with you.</p>
-            <a class="button button-light" href="index.html">Back to Home</a>
-        </section>
-    </main>
+            <div class="form-field">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" rows="5" required minlength="10" aria-describedby="message-error"></textarea>
+              <span class="field-error" id="message-error" aria-live="polite"></span>
+            </div>
 
-    <footer class="site-footer">
-        <a class="logo footer-logo" href="index.html">North Star <span>Bakery</span></a>
-        <p>Freshly baked with love, every day.</p>
-        <p class="copyright">&copy; 2026 North Star Bakery. All rights reserved.</p>
-    </footer>
+            <button class="button" type="submit">Check and Review Message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="visit-banner">
+      <p class="eyebrow">THANK YOU FOR VISITING</p>
+      <h2>Every Day Deserves Something Delicious</h2>
+      <p>We look forward to connecting with you.</p>
+      <a class="button button-light" href="index.html">Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo footer-logo" href="index.html">North Star Bakery</a>
+    <p>Freshly baked with love, every day.</p>
+    <p class="copyright">&copy; 2026 North Star Bakery. All rights reserved.</p>
+  </footer>
 </body>
 </html>
