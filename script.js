@@ -98,7 +98,7 @@ function validateContactForm(form) {
   let isValid = true;
 
   validationRules.forEach(rule => {
-    const input = form.elements[rule.field];
+    const input = form.elements.namedItem(rule.field);
     const value = input ? input.value : "";
     const passes = rule.test(value);
     showFieldError(rule.field, passes ? "" : rule.message);
@@ -110,9 +110,9 @@ function validateContactForm(form) {
 
 function saveContactDraft(form) {
   const draft = {
-    name: form.elements.name.value,
-    email: form.elements.email.value,
-    message: form.elements.message.value
+    name: form.elements.namedItem("name").value,
+    email: form.elements.namedItem("email").value,
+    message: form.elements.namedItem("message").value
   };
   saveJSON(storageKeys.contactDraft, draft);
 }
@@ -121,7 +121,7 @@ function restoreContactDraft(form) {
   const draft = readStoredJSON(storageKeys.contactDraft, {});
   ["name", "email", "message"].forEach(field => {
     if (typeof draft[field] === "string") {
-      form.elements[field].value = draft[field];
+      form.elements.namedItem(field).value = draft[field];
     }
   });
 
@@ -138,7 +138,7 @@ function initialiseContactForm() {
   restoreContactDraft(form);
 
   ["name", "email", "message"].forEach(field => {
-    form.elements[field].addEventListener("input", () => {
+    form.elements.namedItem(field).addEventListener("input", () => {
       showFieldError(field, "");
       saveContactDraft(form);
     });
